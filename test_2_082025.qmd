@@ -1,5 +1,5 @@
 ---
-title: "Sources of categorical data and example use cases"
+title: "Sources of categorical data"
 author: "<br><br><span style='font-size:25px;'><strong>Lesley Chapman Hannah, Ph.D., M.S.</strong></span><br>College of Graduate Studies<br>Northeast Ohio Medical University"
 
 format: 
