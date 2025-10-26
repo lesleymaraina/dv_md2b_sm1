@@ -1,0 +1,471 @@
+---
+title: "Sources of categorical data and example use cases"
+author: "<br><br><span style='font-size:25px;'><strong>Lesley Chapman Hannah, Ph.D., M.S.</strong></span><br>College of Graduate Studies<br>Northeast Ohio Medical University"
+
+format: 
+  revealjs:
+    #theme: solarized
+    css: style.css
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/Flame.jpg
+    #css: styles.css
+    
+---
+
+## Categorical Data Review: Definition
+
+::: incremental
+- Categorical data is often coded data that could consist of constructed labels, designed for communication and record-keeping within specific institutional systems
+
+- Encodings often have a specific purpose within a system
+
+- Example:
+
+  - ICD-10 codes: billing, mortality statistics
+  - CTCAE grades: adverse event grading
+
+
+:::
+
+
+::: footer
+
+:::
+
+## Categorical Data Review: Definition
+
+::: incremental
+- Often requires translation for analysis and can be summarized using counts or ratios
+
+- Example
+
+  - Hundreds of ICD-10 codes: 
+    - E11.9 - type 2 diabetes mellitus without complications
+
+
+:::
+
+
+::: footer
+
+:::
+
+
+## Categorical Variables are produced by different systems
+
+::: incremental
+- Genomic science
+- Diagnostics
+- Treatments/exposures
+- Billing
+
+:::
+
+
+::: footer
+
+:::
+
+## <span style="font-size:60%">Systems often use internal logic to generate categorical labels</span> {.smaller}
+
+::: incremental
+- What counts as a valid value
+- How and whether values are ordered
+- Whether multiple values of a unit can coexist
+- Defining “unknown” within a category
+
+
+:::
+
+
+::: footer
+
+:::
+
+
+
+## <span style="font-size:60%">Common data scources in biomedical and clinical science</span> {.smaller}
+
+::: incremental
+
+- Genomic Data
+- Clinical Data and Electronic Health Records (EHR)
+
+:::
+
+
+::: footer
+
+:::
+
+
+
+## <span style="font-size:60%">Common data scources in biomedical and clinical science</span> {.smaller}
+
+**Genomic Data**
+
+::: incremental
+
+
+**Definition and Scope:**
+
+- Information about an individual’s DNA sequence, including variations in genes, regulatory elements, and sometimes RNA or epigenetic modifications
+- Source: typically generated through high-throughput sequencing technologies like whole-genome sequencing (WGS), whole-exome sequencing (WES), or RNA sequencing
+
+**Types of Genomic Data:**
+
+- *Variant Data*: Single nucleotide polymorphisms (SNPs), insertions/deletions, structural variants
+
+- *Expression Data*: RNA sequencing provides information about gene expression levels
+
+- *Epigenomic Data*: Methylation patterns, chromatin accessibility, etc., which regulate gene expression without altering DNA sequence
+
+:::
+
+
+::: footer
+
+:::
+
+
+## <span style="font-size:60%">Common data scources in biomedical and clinical science</span> {.smaller}
+
+**Genomic Data**
+
+::: incremental
+
+
+**Uses in Research:**
+
+- Understanding disease mechanisms at the molecular level.
+
+- Identifying genetic risk factors for complex diseases.
+
+- Pharmacogenomics: predicting patient response to medications based on genotype
+
+- Integrative analyses, combining EHR clinical phenotypes with genomic profiles to discover genotype-phenotype relationships
+
+**Challenges:**
+
+- High dimensionality: millions of variants per individual
+
+- Need for robust computational infrastructure and bioinformatics expertise
+
+
+:::
+
+
+::: footer
+
+:::
+
+
+
+
+
+## <span style="font-size:60%">Genomic data source</span> {.smaller}
+
+::: incremental
+**dbGaP**
+  - database of Genotypes and Phenotypes (dbGaP) is an NIH-managed platform that curates and distributes genomic and phenotypic data from large-scale human studies
+  
+  - Reseource that allows researchers to integrate and reanalyze datasets while maintaining rigorous standards for participant consent and data security
+
+**UK Biobank**
+  - large-scale biomedical research resource that has collected detailed health, lifestyle, genetic, and imaging data from over 500,000 volunteer participants across the United Kingdom
+
+  - Resource that allows approved researchers to study how genetics, environment, and lifestyle contribute to disease, driving discoveries that improve prevention, diagnosis, and treatment of a wide range of health conditions
+
+
+
+
+:::
+
+
+::: footer
+
+:::
+
+
+
+
+
+## <span style="font-size:60%">Genomic data source</span> {.smaller}
+
+::: incremental
+
+**FinGen**
+  - large  research project in Finland that combines genetic data from biobank samples with comprehensive national health registry data
+  
+  - Resource allows researchers to identify genetic factors that influence health and disease, leveraging Finland’s unique population structure and health records to accelerate medical discoveries and advance precision medicine
+
+
+
+:::
+
+
+::: footer
+
+:::
+
+
+
+## <span style="font-size:60%">Common data scources in biomedical and clinical science</span> {.smaller}
+
+**Electronic Health Records (EHR) and Clinical Data**
+
+::: incremental
+
+
+**Definition and Scope:**
+
+- Electronic Health Records (EHRs) : digital versions of a patient’s chart
+
+- EHRs are used to collect patient health information in real time
+
+- Captures a wide array of data, from diagnoses and medications to lab test results, imaging studies, and physician notes
+
+**Types of Clinical Data in EHRs:**
+
+- *Structured Data* 
+
+  - Coded fields like age, blood pressure readings, lab results, ICD-10 codes for diagnoses, and medication prescriptions
+    - Fields ideal for quantitative analysis
+
+- *Unstructured Data*
+
+  - Free-text clinical notes, radiology reports, and discharge summaries
+  - Data fields contain rich context > requires natural language processing (NLP) techniques to extract useful information
+
+
+:::
+
+
+::: footer
+
+:::
+
+
+## <span style="font-size:60%">Common data scources in biomedical and clinical science</span> {.smaller}
+
+**Electronic Health Records (EHR) and Clinical Data**
+
+::: incremental
+
+
+**Uses in Research:**
+
+- Phenotyping patients for studies (e.g., identifying cohorts with diabetes)
+
+- Observational studies and real-world evidence research
+
+- Predictive modeling, such as using machine learning to forecast disease progression
+
+**Challenges:**
+
+- Data heterogeneity: Different hospitals and EHR systems may encode information differently
+
+- Missing or incomplete data
+
+- Privacy and regulatory considerations (HIPAA in the U.S.)
+
+
+:::
+
+
+::: footer
+
+:::
+
+## <span style="font-size:60%">Clinical and EHR Data</span> {.smaller}
+
+
+
+::: incremental
+**Encounter & visit context (nominal)**
+
+- Encounter type (ED/inpatient/outpatient)
+- Discharge disposition
+- Facility/site
+
+**Utilization & risk bins (ordinal): **
+
+- Comorbidity index bands (0, 1–2, ≥3) 
+- Fall-risk tiers
+
+
+:::
+
+
+::: footer
+
+:::
+
+
+## <span style="font-size:60%">Clinical and EHR Data</span> {.smaller}
+
+
+
+::: incremental
+**Condition/therapy presence (multi-label): **
+
+- Comorbidity flags (DM, CKD, CAD, COPD)
+- Active medication classes (anticoagulant + antiplatelet)
+- Infection flags (Surgical site infection [SSI] + MRSA)
+
+
+**Data sources and quality control (nominal): **
+
+- Data source (EHR/registry/claims)
+- Unit of analysis (patient/encounter/episode)
+
+
+
+:::
+
+
+::: footer
+
+:::
+
+
+## <span style="font-size:60%">Clinical and Health Data Sources</span> {.smaller}
+
+::: incremental
+**National Health and Nutrition Examination Survey (NHANES)**
+
+- Overview
+
+  - comprehensive health and nutrition data from a representative sample of the U.S. population
+  
+  - NHANES data helps estimate the prevalence of chronic conditions like diabetes, hypertension, and obesity in the U.S.
+
+- Key Features:
+
+  - Demographics and Lifestyle: Age, gender, ethnicity, diet, physical activity, and socioeconomic factors
+
+  - Clinical Measurements: Blood pressure, body mass index, bone density, vision and hearing tests
+
+  - Laboratory Tests: Blood and urine analyses for cholesterol, glucose, nutrient levels, environmental chemicals, and more
+
+:::
+
+
+::: footer
+
+:::
+
+
+## <span style="font-size:60%">Clinical and Health Data Sources</span> {.smaller}
+
+
+
+::: incremental
+**County Health Rankings and Roadmaps**
+
+- Overview
+
+  - CHR&R is a program developed by the Robert Wood Johnson Foundation in partnership with the University of Wisconsin Population Health Institute
+  - Provides a comprehensive snapshot of health and well-being at the county level across the United States
+  - Standardized, publicly available dataset for epidemiologists, health services researchers, and data scientists to study social determinants of health
+
+- Key Features:
+
+ - Health Outcomes: Measures of how healthy a county is today, including:
+
+    - Mortality: Premature death rates
+
+    - Health Behaviors: Smoking, diet, physical activity, alcohol use
+
+    - Clinical Care: Access to care, quality of care
+
+  - Social & Economic Factors: Education, employment, income, family and social support
+
+:::
+
+
+::: footer
+
+:::
+
+## <span style="font-size:60%">Clinical and Pharmaceutical Data</span> {.smaller}
+
+
+
+::: incremental
+**FDA Purple Book**
+
+- *Overview*
+
+  - Publicly available database maintained by the U.S. Food and Drug Administration (FDA) that provides information on licensed biological products
+  
+  - For Researchers: Provides authoritative information on which biologics are approved and their relationships to biosimilars
+
+- For Clinicians and Pharmacists: Supports informed decisions about prescribing or substituting biologic therapies
+
+- *Key Features*:
+
+  - Biologics and Biosimilars:
+
+  - Lists all FDA-licensed biological products
+
+
+
+:::
+
+
+::: footer
+
+:::
+
+
+## <span style="font-size:60%">Clinical and Pharmaceutical Data</span> {.smaller}
+
+
+
+::: incremental
+**FDA Purple Book**
+
+
+- *Approved Drug Products*:
+
+  - Lists brand-name and generic drugs, including details such as active ingredients, dosage forms, strengths, and routes of administration
+
+  - Serves as an official record of drugs that have met FDA standards for safety, efficacy, and quality
+
+- *Therapeutic Equivalence Ratings*:
+
+  - Evaluates whether a generic drug is therapeutically equivalent to its reference listed drug (RLD)
+
+:::
+
+
+::: footer
+
+:::
+
+
+## <span style="font-size:60%">Links to Data Sources</span> {.smaller}
+
+
+
+::: incremental
+[**FDA Purple Book**](https://purplebooksearch.fda.gov/)
+
+[**County Health Rankings and Roadmaps**](https://www.countyhealthrankings.org/)
+
+[**County Health Rankings and Roadmaps**](https://www.cdc.gov/nchs/nhanes/index.html)
+
+[**dbGaP**](https://dbgap.ncbi.nlm.nih.gov/home)
+
+[**UK Biobank**](https://www.ukbiobank.ac.uk/)
+:::
+
+
+::: footer
+
+:::
+
