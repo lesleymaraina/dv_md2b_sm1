@@ -539,14 +539,12 @@ These clinical data help track health, disease progression, and treatment outcom
 
 ## <span style="font-size:60%">Links to Data Sources</span> {.smaller}
 
-
-
 ::: incremental
 [**FDA Purple Book**](https://purplebooksearch.fda.gov/)
 
 [**County Health Rankings and Roadmaps**](https://www.countyhealthrankings.org/)
 
-[**County Health Rankings and Roadmaps**](https://www.cdc.gov/nchs/nhanes/index.html)
+[**National Health and Nutrition Examination Survey (NHANES)**](https://www.cdc.gov/nchs/nhanes/index.html)
 
 [**dbGaP**](https://dbgap.ncbi.nlm.nih.gov/home)
 
