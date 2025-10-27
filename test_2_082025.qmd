@@ -87,7 +87,7 @@ format:
 
 
 
-## <span style="font-size:60%">Common data scources in biomedical and clinical science</span> {.smaller}
+## <span style="font-size:60%">Common data Sources in biomedical and clinical science</span> {.smaller}
 
 ::: incremental
 
@@ -103,7 +103,7 @@ format:
 
 
 
-## <span style="font-size:60%">Common data scources in biomedical and clinical science</span> {.smaller}
+## <span style="font-size:60%">Common data Sources in biomedical and clinical science</span> {.smaller}
 
 **Genomic Data**
 
@@ -131,7 +131,7 @@ format:
 :::
 
 
-## <span style="font-size:60%">Common data scources in biomedical and clinical science</span> {.smaller}
+## <span style="font-size:60%">Common data Sources in biomedical and clinical science</span> {.smaller}
 
 **Genomic Data**
 
@@ -213,7 +213,7 @@ format:
 
 
 
-## <span style="font-size:60%">Common data scources in biomedical and clinical science</span> {.smaller}
+## <span style="font-size:60%">Common data Sources in biomedical and clinical science</span> {.smaller}
 
 **Electronic Health Records (EHR) and Clinical Data**
 
@@ -249,7 +249,7 @@ format:
 :::
 
 
-## <span style="font-size:60%">Common data scources in biomedical and clinical science</span> {.smaller}
+## <span style="font-size:60%">Common data Sources in biomedical and clinical science</span> {.smaller}
 
 **Electronic Health Records (EHR) and Clinical Data**
 
